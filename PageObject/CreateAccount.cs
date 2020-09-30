@@ -120,7 +120,7 @@ namespace AnswerDigital.PageObject
         public void EnterUserDetail()
         {            
             SignInBtn.Click();
-            EmailAddress.SendKeys("Answ002@email.com");
+            EmailAddress.SendKeys("Answer002@email.com");
             BasePage.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             CreateAcccontBtn.Click();
 
