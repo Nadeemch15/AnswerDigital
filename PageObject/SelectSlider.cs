@@ -20,12 +20,16 @@ namespace AnswerDigital.PageObject
         IWebElement Slider { get; set; }
         
         public void MoveSlider()
-        {   //slider change the price                   
+        {   //scroll down the page
+            IJavaScriptExecutor js = (IJavaScriptExecutor)BasePage.driver;
+            js.ExecuteScript("window.scrollBy(0,1000)");
+
+
+            //slider change the price                   
             Actions move = new Actions(BasePage.driver);
             move.DragAndDropToOffset(Slider, -182, 0).Perform();
             /*price has been changed - but there is defect in website it's loading 
              * the page indefinitely */
-
         }
     }    
 }

@@ -26,10 +26,11 @@ namespace AnswerDigital.TestScript
         {
             CreateAccount Ca = new CreateAccount();
 
-            // enter user detials
+            //enter user detials
             Ca.EnterUserDetail();
-            // Incomelet user detial for error message
-            Ca.EnterInvalidDetail();
+           // Incomelet user detial for error message
+
+           Ca.EnterInvalidDetail();
 
         }
         [Test]

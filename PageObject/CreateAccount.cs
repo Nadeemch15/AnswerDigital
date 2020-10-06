@@ -14,6 +14,7 @@ namespace AnswerDigital.PageObject
 {
     public class CreateAccount
     {
+        BasePage Bpage = new BasePage();
         public CreateAccount()
         {
             PageFactory.InitElements(BasePage.driver, this);
@@ -120,7 +121,7 @@ namespace AnswerDigital.PageObject
         public void EnterUserDetail()
         {            
             SignInBtn.Click();
-            EmailAddress.SendKeys("Answer002@email.com");
+            EmailAddress.SendKeys("Answer004@email.com");
             BasePage.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             CreateAcccontBtn.Click();
 
@@ -158,8 +159,8 @@ namespace AnswerDigital.PageObject
             Assert.AreEqual("Nadeem Digital", VerifyUser.Text);
             Console.WriteLine(VerifyUser.Text+ " Displayed");
 
-            Thread.Sleep(1000);
 
+            Bpage.Imp_wait();
             //AC 4.3 verify user taken to MY ACCOUNT page
             Assert.IsTrue(Pageheading.Displayed);
             Console.WriteLine(Pageheading.Text + " Displayed");
